@@ -1,0 +1,29 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent url(../images/background.png) repeat center center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: space-around;
+    height: 87%;
+    width: 100%;
+}
+
+.main .turn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 52%;
+    margin: 2% 0;
+}
