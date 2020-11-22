@@ -40,9 +40,18 @@
     font-family: 'Mukta', sans-serif;
 }
 
-.main .turn .time .labelTime{
+.main .turn .time .chronometer{
     display: flex;
     flex-direction: row;
+}
+.main .board {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    width: 33%;
+    background: url(../images/boardBackground.jpg);
+    border-radius: 5%;
+    padding: 0 2%;
+    width: 50%;
+    height: 70%;
 }
