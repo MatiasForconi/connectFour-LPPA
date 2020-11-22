@@ -19,15 +19,27 @@
             <button id="Players3" class="buttonScreen">3 Players</button>
             <button id="contact" class="buttonScreen">Contact</button>
         </div>
-        <div id="playersNamesScreen" class="screen">
-            <div id="playersNames"></div>
-            <div class="footerScreen">
-                <button id="backPlayersNames" class="buttonScreen buttonForm">Back</button>
-                <button id="nextPlayersNames" class="buttonScreen buttonForm">Next</button>
+        <div class="main">
+            <div class="turn">
+                <div id="timeP1" class="time">
+                    <div class="nameP1">Name</div>
+                    <div class="chronometer">
+                        <div id="timeMP1" class="labelTime">0</div>
+                        <div>:</div>
+                        <div id="timeSP1" class="labelTime">0</div>
+                    </div>
+                    <div class="labelTime">Player 1</div>
+                </div>
+                <div id="timeP2" class="time">
+                    <div class="nameP2">Name</div>
+                    <div class="chronometer">
+                        <div id="timeMP2" class="labelTime">0</div>
+                        <div class="labelTime">:</div>
+                        <div id="timeSP2" class="labelTime">0</div>
+                    </div>
+                    <div class="labelTime">Player 2</div>
+                </div>
             </div>
-        </div>
-        <div class="main"></div>
-            <div id="turn" class="turn"></div>
             <div id="board" class="board"></div>
         </div>
         <div class="footer">
@@ -40,6 +52,11 @@
                     <button id="loadBoard" class="buttonMain">Load</button>
                 </div>
             </div>
+            <div id="winScreen" class="screen"></div>
+        <div id="contactScreen" class="screen">
+            <button id="back" class="buttonScreen">Back</button>
+            <button id="send" class="buttonScreen">Send</button>
         </div>
+    </div>
 </body>
 </html>

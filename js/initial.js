@@ -3,12 +3,13 @@ var timeP1HTML = null,
     timeMP1HTML = null,
     timeSP1HTML = null,
     timeMP2HTML = null,
-    turn = 'red',
     timeSP2HTML = null;
+    winScreen = null;
 var init = function () {
     turn = Math.random() > 0.5 ? 'red' : 'blue';
     turn = turn = Math.random() > 0.5 ? 'red' : 'blue';
     boardHTML = document.getElementById('board');
+    winScreen = document.getElementById('winScreen');
     timeP1HTML = document.getElementById('timeP1');
     timeP2HTML = document.getElementById('timeP2');
     timeMP1HTML = document.getElementById('timeMP1');
