@@ -7,19 +7,19 @@
     height: 50%;
     padding: 2%;
     border-radius: 10%;
-    background-color: #ffff;
+    background-color: #c42c2c;
 }
-.buttonSceen{
+.buttonScreen{
     width: 40%;
     height: 15%;
-    background-color: #26A69A; 
+    background-color: #189b1f; 
     border: 0;
     border-radius: 10%;
 }
 .buttonScreen:hover{
     width: 45%;
     height: 17%;
-    background-color: #3e84b3; 
+    background-color: #71108a; 
 }
 input,textarea{
     width: 100%;
