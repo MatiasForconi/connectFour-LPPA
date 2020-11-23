@@ -15,31 +15,33 @@ var boardHTML = null,
             for (var j = 0; j < 4; j++) {
             if (boardArray[i][j]) {
                 if (boardArray[i][j] === (boardArray[i][j + 1]) && boardArray[i][j] === (boardArray[i][j + 2]) && boardArray[i][j] === (boardArray[i][j + 3])) {
-                    winScreen.innerHTML = ('You win ' + turn);
+                    winHTML.innerHTML = ('You win ' + turn);
+                    winDescHTML.innerHTML = ('Congratulations, placed four ' + turn + ' tiles online before your adversary!');
                     goWin();
                 }
             }
-            }
-        }
+
         for (var i = 0; i < 4; i++) {
             for (var j = 0; j < 4; j++) {
                 if (boardArray[i][j]) {
                     if (boardArray[i][j] === (boardArray[i + 1][j]) && boardArray[i][j] === (boardArray[i + 2][j]) && boardArray[i][j] === (boardArray[i + 3][j])) {
-                        winScreen.innerHTML = ('You win ' + turn);
+                        winHTML.innerHTML = ('You win ' + turn);
+                        winDescHTML.innerHTML = ('Congratulations, placed four ' + turn + ' tiles online before your adversary!');
                         goWin();
                     }
                     if (boardArray[i][j] === (boardArray[i + 1][j + 1]) && boardArray[i][j] === (boardArray[i + 2][j + 2]) && boardArray[i][j] === (boardArray[i + 3][j + 3])) {
-                        winScreen.innerHTML = ('You win ' + turn);
+                        winHTML.innerHTML = ('You win ' + turn);
+                        winDescHTML.innerHTML = ('Congratulations, placed four ' + turn + ' tiles online before your adversary!');
                         goWin();
                     }
                 }
-            }
-        }
+
         for (var i = 0; i < 4; i++) {
             for (var j = 3; j < 7; j++) {
                 if (boardArray[i][j]) {
                     if (boardArray[i][j] === (boardArray[i + 1][j - 1]) && boardArray[i][j] === (boardArray[i + 2][j - 2]) && boardArray[i][j] === (boardArray[i + 3][j - 3]) ) {
-                        winScreen.innerHTML = ('You win ' + turn);
+                        winHTML.innerHTML = ('You win ' + turn);
+                    winDescHTML.innerHTML = ('Congratulations, placed four ' + turn + ' tiles online before your adversary!');
                         goWin();
                     }
                 }
