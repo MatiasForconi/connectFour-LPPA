@@ -12,13 +12,18 @@
     <script type="text/javascript" src="js/initial.js"></script>
 </head>
 <body>
+    <!--All game content starts-->
     <div class="wrapper">
+        <!--initialWindow is the first window that is shown in the game, 
+            where there are buttons to select if you play as 2 or 3 players,
+            and one that sends you to the contact window-->
         <div id="initialScreen" class="screen">
             <h2>Connect Four</h2>
             <button id="Players2" class="buttonScreen">2 Players</button>
             <button id="Players3" class="buttonScreen">3 Players</button>
             <button id="contact" class="buttonScreen">Contact</button>
         </div>
+        <!--main is the container of the game-->
         <div class="main">
             <div class="turn">
                 <div id="timeP1" class="time">
@@ -53,9 +58,21 @@
                 </div>
             </div>
             <div id="winScreen" class="screen"></div>
+            <!--this screen appears when the contact button is pressed in the initialScreen-->
         <div id="contactScreen" class="screen">
             <button id="back" class="buttonScreen">Back</button>
             <button id="send" class="buttonScreen">Send</button>
+            <h2>Contact</h2>
+            <label for="name">Name</label>
+            <input id="name" class="ingress" type="text" name="name">
+            <label for="email">Email</label>
+            <input id="email" class="ingress" type="text" name="email">
+            <label for="message">Message</label>
+            <textarea id="message" class="ingress" name="message"></textarea>
+            <div class="footerScreen">
+            <button id="back" class="buttonScreen buttonContact">Back</button>
+            <button id="send" class="buttonScreen buttonContact">Send</button>
+            </div>
         </div>
     </div>
 </body>
