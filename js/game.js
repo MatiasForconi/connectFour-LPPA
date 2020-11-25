@@ -4,8 +4,15 @@ var turn = 'red',
     acumSP2 = 0,
     acumMP2 = 0,
     ChronometerP1,
-    ChronometerP2;
+    ChronometerP2,
+    timeP1HTML = null,
+    timeP2HTML = null,
+    timeMP1HTML = null,
+    timeSP1HTML = null,
+    timeMP2HTML = null,
+    timeSP2HTML = null;
 
+    //  Stop all Chronometers    
 var stopChronometer = function () {
     clearInterval(ChronometerP1);
     clearInterval(ChronometerP2);
@@ -14,28 +21,25 @@ var stopChronometer = function () {
     if(turn === 'red'){
       ChronometerP1 = setInterval(
         function(){
-          if (acumSP1 == 60)
-          {
+          if (acumSP1 == 60){
             acumSP1 = 0;
             acumMP1++;
             timeMP1HTML.innerHTML = acumMP1;
-          }
-          timeSP1HTML.innerHTML = acumSP1;
-          acumSP1++;
+        }
+        timeSP1HTML.innerHTML = acumSP1;
+        acumSP1++;
         },1000);
 
     }else if (turn === 'blue'){
       ChronometerP2 = setInterval(
         function(){
-
-          if (acumSP2 == 60)
-          {
+          if (acumSP2 == 60){
             acumSP2 = 0;
             acumMP2++;
             timeMP2HTML.innerHTML = acumMP2;
-          }
-          timeSP2HTML.innerHTML = acumSP2;
-          acumSP2++;
+        }
+        timeSP2HTML.innerHTML = acumSP2;
+        acumSP2++;
         },1000);
     }
   }

@@ -1,19 +1,26 @@
+/*this file controll all windows*/
 var goHome = function(){
-    document.getElementsByClassName('main')[0].style.display = 'none';
-    document.getElementsByClassName('footer')[0].style.display = 'none';
-    document.getElementById('contactScreen').style.display= 'none';
-    document.getElementById('winScreen').style.display= 'none';
-    document.getElementById('initialScreen').style.display= 'flex';
-  }
+  document.getElementsByClassName('main')[0].style.display = 'none';
+	document.getElementsByClassName('footer')[0].style.display = 'none';
+	document.getElementById('contactWindow').style.display= 'none';
+	document.getElementById('winWindows').style.display= 'none';
+	document.getElementById('initialWindow').style.display= 'flex';
+}
 
-  var goContact = function(){
-    document.getElementById('contactScreen').style.display= 'flex';
-    document.getElementById('initialScreen').style.display= 'none';
-  }
+var goContact = function(){
+	document.getElementById('contactWindow').style.display= 'flex';
+	document.getElementById('initialWindow').style.display= 'none';
+}
 
-  var goGame = function(){
-    document.getElementsByClassName('main')[0].style.display = 'none';
-    document.getElementsByClassName('footer')[0].style.display = 'none';
-    document.getElementById('winScreen').style.display= 'flex';
-    render();
-  }
+var goGame = function(){
+	document.getElementsByClassName('main')[0].style.display = 'flex';
+	document.getElementsByClassName('footer')[0].style.display = 'flex';
+	document.getElementsByClassName('window')[0].style.display = 'none';
+ 	render();
+}
+
+var goWin = function(){
+	document.getElementsByClassName('main')[0].style.display = 'none';
+	document.getElementsByClassName('footer')[0].style.display = 'none';
+	document.getElementById('winWindows').style.display= 'flex';
+}

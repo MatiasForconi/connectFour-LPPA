@@ -1,11 +1,7 @@
-var timeP1HTML = null,
-    timeP2HTML = null,
-    timeMP1HTML = null,
-    timeSP1HTML = null,
-    timeMP2HTML = null,
-    timeSP2HTML = null;
-    winHTML = null,
-    winDescHTML = null;
+/*  In this file, each variable is added with its respective HTML element, 
+    and the variable turn is initialized randomly, starts the onclick events 
+    and run the goHome function. 
+    all variables with HTML in their name, refers to the dom element */
 var init = function () {
     turn = Math.random() > 0.5 ? 'red' : 'blue';
     turn = turn = Math.random() > 0.5 ? 'red' : 'blue';

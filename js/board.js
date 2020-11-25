@@ -1,5 +1,7 @@
 var boardHTML = null,
     columnsHTML = null,
+    winHTML = null,
+    winDescHTML = null,
     boardArray = [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -16,9 +18,10 @@ var boardHTML = null,
         for (var i = 0; i < l; i++) {
             for (var j = 0; j < boardArray[i].length-3; j++) {
                 if (boardArray[i][j]) {
-                    if (boardArray[i][j] === (boardArray[i][j + 1]) && boardArray[i][j] === (boardArray[i][j + 2]) && boardArray[i][j] === (boardArray[i][j + 3])) {
-                        winHTML.innerHTML = ('You win ' + turn);
-                        winDescHTML.innerHTML = ('Congratulations, placed four ' + turn + ' tiles online before your adversary!');
+                    k++;
+                    if(k===l){
+                        winHTML.innerHTML = ('DRAW');
+                        winDescHTML.innerHTML = ('No more space for tiles!');
                         goWin();
                     }
                 }
