@@ -59,6 +59,28 @@ var stopChronometer = function () {
     startChronometer();
   }
 
+  var loadNewGame = function(){
+    turn = 'red',
+    acumSP1 = 0,
+    acumMP1 = 0,
+    acumSP2 = 0,
+    acumMP2 = 0,
+    timeSP2HTML.innerHTML = acumSP2;
+    timeMP2HTML.innerHTML = acumMP2;
+    timeSP1HTML.innerHTML = acumSP1;
+    timeMP1HTML.innerHTML = acumMP1;
+    boardArray = [
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        ];
+    goGame();
+}
+
   var buttonLoadHandler = function (){
     buttonLoadHTML = document.getElementsByClassName('buttonLoad');
     for (var i = 0; i < buttonLoadHTML.length; i++){
