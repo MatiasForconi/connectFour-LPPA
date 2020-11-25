@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/screens.css">
     <script type="text/javascript" src="js/localStorage.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
     <script type="text/javascript" src="js/board.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
@@ -63,7 +64,7 @@
                 <div id="savedGames" class="savedGames"></div>
                 <div class="footerScreen">
                     <button id="backLoad" class="buttonScreen buttonContact">Back</button>
-                    <button id="nextLoad" class="buttonWindow buttonContact">Next</button>
+                    <button id="nextLoad" class="buttonScreen buttonContact">Next</button>
                 </div>
             </div>
             <div id="winScreen" class="screen">
@@ -74,15 +75,16 @@
             <!--this screen appears when the contact button is pressed in the initialScreen-->
         <div id="contactScreen" class="screen">
             <h2>Contact</h2>
-            <label for="name">Name</label>
-            <input id="name" class="ingress" type="text" name="name">
-            <label for="email">Email</label>
-            <input id="email" class="ingress" type="text" name="email">
-            <label for="message">Message</label>
-            <textarea id="message" class="ingress" name="message"></textarea>
+            <label for="contactName">Name</label>
+                <input id="contactName" class="ingress" type="text" name="name">
+                <label for="contactEmail">Email</label>
+                <input id="contactEmail" class="ingress" type="text" name="email">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" class="ingress" name="message"></textarea>
+            <div id="contactError"></div>
             <div class="footerScreen">
-            <button id="backContact" class="buttonScreen buttonContact">Back</button>
-            <button id="sendContact" class="buttonScreen buttonContact">Send</button>
+                <button id="backContact" class="buttonScreen buttonContact">Back</button>
+                <button id="sendContact" class="buttonScreen buttonContact">Send</button>
             </div>
         </div>
     </div>
