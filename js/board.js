@@ -76,7 +76,7 @@ var columnEventHandler = function (e) {
             boardArray[columnId][i] = turn;
             checkGameStatus();
             toggleTurn();
-            render();
+            renderBoard();
             break;
         }
     }

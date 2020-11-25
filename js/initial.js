@@ -18,10 +18,10 @@ var init = function () {
     Players2 = document.getElementById('Players2');
     contact = document.getElementById('contact');
     home = document.getElementById('home');
-    back = document.getElementById('back');
     backContact = document.getElementById('backContact');
     backLoad = document.getElementById('backLoad');
     sendLoad = document.getElementById('sendLoad');
+    savedGamesHTML = document.getElementById('savedGames');
     load = document.getElementById('load');
     save = document.getElementById('save');
     newGame.onclick = goHome;
@@ -33,6 +33,7 @@ var init = function () {
     save.onclick = saveGame;
     load.onclick = goLoad;
     saveGame()
+    sendLoad.onclick = loadGame;
     goHome();
 }
 window.onload = init;

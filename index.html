@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONNECT FOUR</title>
+    <title>Connect Four</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/screens.css">
@@ -46,7 +46,6 @@
                     </div>
                     <div class="labelTime">Player 2</div>
                 </div>
-            </div>
             <div id="board" class="board"></div>
         </div>
         <div class="footer">
@@ -61,7 +60,7 @@
              <!--this window appears when press the Load button-->
             <div id="loadScreen" class="screen">
                 <h2> Saved Games</h2>
-                <div id="savedGames"></div>
+                <div id="savedGames" class="savedGames"></div>
                 <div class="footerScreen">
                     <button id="backLoad" class="buttonScreen buttonContact">Back</button>
                     <button id="sendLoad" class="buttonScreen buttonContact">Load</button>
@@ -74,8 +73,6 @@
             </div>
             <!--this screen appears when the contact button is pressed in the initialScreen-->
         <div id="contactScreen" class="screen">
-            <button id="back" class="buttonScreen">Back</button>
-            <button id="send" class="buttonScreen">Send</button>
             <h2>Contact</h2>
             <label for="name">Name</label>
             <input id="name" class="ingress" type="text" name="name">

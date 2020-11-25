@@ -5,6 +5,8 @@ var turn = 'red',
     acumMP2 = 0,
     ChronometerP1,
     ChronometerP2,
+    savedGamesHTML = null,
+    buttonLoadHTML = null,
     timeP1HTML = null,
     timeP2HTML = null,
     timeMP1HTML = null,
@@ -55,4 +57,21 @@ var stopChronometer = function () {
       timeP2HTML.style.background = 'black';
     }
     startChronometer();
+  }
+
+  var buttonLoadHandler = function (){
+    buttonLoadHTML = document.getElementsByClassName('buttonLoad');
+    for (var i = 0; i < buttonLoadHTML.length; i++){
+        buttonLoadHTML[i].onclick = loadGame;
+    }
+  }
+//  load the saved games
+//  generates HTML content in the window
+  var renderLoad = function(){ 
+      var html = '';
+      for (var i = 0; i < LSSavedGames.length; i++){
+          html += '<div id="load' + i + '" class="buttonWindow buttonLoad">' + i + '</div>';
+      }
+      savedGamesHTML.innerHTML = html;
+      buttonLoadHandler();
   }

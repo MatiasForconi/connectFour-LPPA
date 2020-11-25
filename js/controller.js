@@ -18,7 +18,7 @@ var goGame = function(){
 	document.getElementsByClassName('footer')[0].style.display = 'flex';
 	document.getElementsByClassName('screen')[0].style.display = 'none';
   document.getElementById('loadScreen').style.display= 'none';
-	render();
+	renderBoard();
 }
 
 var goWin = function(){
@@ -31,4 +31,5 @@ var goLoad = function(){
 	document.getElementsByClassName('main')[0].style.display = 'none';
 	document.getElementsByClassName('footer')[0].style.display = 'none';
 	document.getElementById('loadScreen').style.display= 'flex';
+	renderLoad();
 }
