@@ -1,10 +1,10 @@
 /*this file controll all windows*/
 var goHome = function(){
-  document.getElementsByClassName('main')[0].style.display = 'none';
+	document.getElementsByClassName('main')[0].style.display = 'none';	
 	document.getElementsByClassName('footer')[0].style.display = 'none';
 	document.getElementById('contactScreen').style.display= 'none';
-  document.getElementById('winScreen').style.display= 'none';
-  document.getElementById('loadScreen').style.display= 'none';
+	document.getElementById('winScreen').style.display= 'none';
+	document.getElementById('loadScreen').style.display= 'none';
 	document.getElementById('initialScreen').style.display= 'flex';
 }
 
@@ -25,7 +25,7 @@ var goGame = function(){
 var goWin = function(){
 	document.getElementsByClassName('main')[0].style.display = 'none';
 	document.getElementsByClassName('footer')[0].style.display = 'none';
-	document.getElementById('winWindows').style.display= 'flex';
+	document.getElementById('winScreen').style.display= 'flex';
 }
 
 var goLoad = function(){

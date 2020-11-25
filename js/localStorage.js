@@ -7,8 +7,6 @@ var saveGame = function() {
 var loadGame = function(e){
     var loadId = e.target.id.substr(4, 1);
     loadLocalStorage = JSON.parse(localStorage["SaveGame"]);
-    console.log(loadLocalStorage);
-    console.log(loadLocalStorage[loadId]);
     boardArray = loadLocalStorage[loadId].boardArray;
     turn = loadLocalStorage[loadId].turn;
     acumSP1 = loadLocalStorage[loadId].acumSP1;

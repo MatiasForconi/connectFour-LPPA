@@ -19,18 +19,19 @@ var stopChronometer = function () {
     clearInterval(ChronometerP1);
     clearInterval(ChronometerP2);
   }
-  var startChronometer = function () {
-    if(turn === 'red'){
-      ChronometerP1 = setInterval(
-        function(){
-          if (acumSP1 == 60){
-            acumSP1 = 0;
-            acumMP1++;
-            timeMP1HTML.innerHTML = acumMP1;
-        }
-        timeSP1HTML.innerHTML = acumSP1;
-        acumSP1++;
-        },1000);
+
+var startChronometer = function () {
+  if(turn === 'red'){
+    ChronometerP1 = setInterval(
+      function(){
+        if (acumSP1 == 60){
+          acumSP1 = 0;
+          acumMP1++;
+          timeMP1HTML.innerHTML = acumMP1;
+      }
+      timeSP1HTML.innerHTML = acumSP1;
+      acumSP1++;
+      },1000);
 
     }else if (turn === 'blue'){
       ChronometerP2 = setInterval(
@@ -61,10 +62,10 @@ var stopChronometer = function () {
 
   var loadNewGame = function(){
     turn = 'red',
-    acumSP1 = 0,
-    acumMP1 = 0,
-    acumSP2 = 0,
-    acumMP2 = 0,
+    acumSP1 = 0;
+    acumMP1 = 0;
+    acumSP2 = 0;
+    acumMP2 = 0;
     timeSP2HTML.innerHTML = acumSP2;
     timeMP2HTML.innerHTML = acumMP2;
     timeSP1HTML.innerHTML = acumSP1;
@@ -81,7 +82,7 @@ var stopChronometer = function () {
     goGame();
 }
 
-  var buttonLoadHandler = function (){
+  var buttonLoadHandler = function(){
     buttonLoadHTML = document.getElementsByClassName('buttonLoad');
     for (var i = 0; i < buttonLoadHTML.length; i++){
         buttonLoadHTML[i].onclick = loadGame;
@@ -92,7 +93,7 @@ var stopChronometer = function () {
   var renderLoad = function(){ 
       var html = '';
       for (var i = 0; i < LSSavedGames.length; i++){
-          html += '<div id="load' + i + '" class="buttonWindow buttonLoad">' + i + '</div>';
+          html += '<div id="load' + i + '" class="buttonScreen buttonLoad">' + i + '</div>';
       }
       savedGamesHTML.innerHTML = html;
       buttonLoadHandler();
