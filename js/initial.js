@@ -19,11 +19,20 @@ var init = function () {
     contact = document.getElementById('contact');
     home = document.getElementById('home');
     back = document.getElementById('back');
+    backContact = document.getElementById('backContact');
+    backLoad = document.getElementById('backLoad');
+    sendLoad = document.getElementById('sendLoad');
+    load = document.getElementById('load');
+    save = document.getElementById('save');
     newGame.onclick = goHome;
     Players2.onclick = goGame;
     contact.onclick = goContact;
     home.onclick = goHome;
-    back.onclick = goHome;
+    backContact.onclick = goHome;
+    backLoad.onclick = goGame;
+    save.onclick = saveGame;
+    load.onclick = goLoad;
+    saveGame()
     goHome();
 }
 window.onload = init;

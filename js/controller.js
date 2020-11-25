@@ -2,25 +2,33 @@
 var goHome = function(){
   document.getElementsByClassName('main')[0].style.display = 'none';
 	document.getElementsByClassName('footer')[0].style.display = 'none';
-	document.getElementById('contactWindow').style.display= 'none';
-	document.getElementById('winWindows').style.display= 'none';
-	document.getElementById('initialWindow').style.display= 'flex';
+	document.getElementById('contactScreen').style.display= 'none';
+  document.getElementById('winScreen').style.display= 'none';
+  document.getElementById('loadScreen').style.display= 'none';
+	document.getElementById('initialScreen').style.display= 'flex';
 }
 
 var goContact = function(){
-	document.getElementById('contactWindow').style.display= 'flex';
-	document.getElementById('initialWindow').style.display= 'none';
+	document.getElementById('contactScreen').style.display= 'flex';
+	document.getElementById('initialScreen').style.display= 'none';
 }
 
 var goGame = function(){
 	document.getElementsByClassName('main')[0].style.display = 'flex';
 	document.getElementsByClassName('footer')[0].style.display = 'flex';
-	document.getElementsByClassName('window')[0].style.display = 'none';
- 	render();
+	document.getElementsByClassName('screen')[0].style.display = 'none';
+  document.getElementById('loadScreen').style.display= 'none';
+	render();
 }
 
 var goWin = function(){
 	document.getElementsByClassName('main')[0].style.display = 'none';
 	document.getElementsByClassName('footer')[0].style.display = 'none';
 	document.getElementById('winWindows').style.display= 'flex';
+}
+
+var goLoad = function(){
+	document.getElementsByClassName('main')[0].style.display = 'none';
+	document.getElementsByClassName('footer')[0].style.display = 'none';
+	document.getElementById('loadScreen').style.display= 'flex';
 }

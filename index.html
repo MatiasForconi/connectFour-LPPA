@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/screens.css">
+    <script type="text/javascript" src="js/localStorage.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
     <script type="text/javascript" src="js/board.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
@@ -49,13 +50,21 @@
             <div id="board" class="board"></div>
         </div>
         <div class="footer">
-            <div class="subButtons">
                 <div class="btnLeft">
                     <button id="home" class="buttonMain">Home</button>
                 </div>
                 <div class="btnRight">
-                    <button id="saveBoard" class="buttonMain">Save</button>
-                    <button id="loadBoard" class="buttonMain">Load</button>
+                    <button id="save" class="buttonMain">Save</button>
+                    <button id="load" class="buttonMain">Load</button>
+                </div>
+            </div>
+             <!--this window appears when press the Load button-->
+            <div id="loadScreen" class="screen">
+                <h2> Saved Games</h2>
+                <div id="savedGames"></div>
+                <div class="footerScreen">
+                    <button id="backLoad" class="buttonScreen buttonContact">Back</button>
+                    <button id="sendLoad" class="buttonScreen buttonContact">Load</button>
                 </div>
             </div>
             <div id="winScreen" class="screen">
@@ -75,8 +84,8 @@
             <label for="message">Message</label>
             <textarea id="message" class="ingress" name="message"></textarea>
             <div class="footerScreen">
-            <button id="back" class="buttonScreen buttonContact">Back</button>
-            <button id="send" class="buttonScreen buttonContact">Send</button>
+            <button id="backContact" class="buttonScreen buttonContact">Back</button>
+            <button id="sendContact" class="buttonScreen buttonContact">Send</button>
             </div>
         </div>
     </div>
