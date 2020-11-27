@@ -81,6 +81,11 @@
     background-color: #f16552;
 }
 
+.main .board .column .spot.player3{
+    width: 75%;
+    height: 10%;
+}
+
 .footer{
     display: flex;
     justify-content: space-between;
