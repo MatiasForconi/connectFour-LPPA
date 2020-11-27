@@ -26,6 +26,14 @@
             <button id="Players3" class="buttonScreen">3 Players</button>
             <button id="contact" class="buttonScreen">Contact</button>
         </div>
+        <!--if select two or three players, open this window-->
+        <div id="playersNamesScreen" class="screen">
+            <div id="playersNames"></div>
+            <div class="footerScreen">
+                <button id="backPlayersNames" class="buttonScreen buttonForm">Back</button>
+                <button id="nextPlayersNames" class="buttonScreen buttonForm">Next</button>
+            </div>
+        </div>
         <!--main is the container of the game-->
         <div class="main">
             <div class="turn">
@@ -63,8 +71,7 @@
                 <h2> Saved Games</h2>
                 <div id="savedGames" class="savedGames"></div>
                 <div class="footerScreen">
-                    <button id="backLoad" class="buttonScreen buttonContact">Back</button>
-                    <button id="nextLoad" class="buttonScreen buttonContact">Next</button>
+                    <button id="backLoad" class="buttonScreen buttonForm">Back</button>
                 </div>
             </div>
             <div id="winScreen" class="screen">
@@ -83,8 +90,8 @@
                 <textarea id="contactMessage" class="ingress" name="message"></textarea>
             <div id="contactError"></div>
             <div class="footerScreen">
-                <button id="backContact" class="buttonScreen buttonContact">Back</button>
-                <button id="sendContact" class="buttonScreen buttonContact">Send</button>
+                <button id="backContact" class="buttonScreen buttonForm">Back</button>
+                    <button id="sendContact" class="buttonScreen buttonForm">Send</button>
             </div>
         </div>
     </div>

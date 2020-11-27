@@ -12,7 +12,13 @@ var turn = 'red',
     timeMP1HTML = null,
     timeSP1HTML = null,
     timeMP2HTML = null,
-    timeSP2HTML = null;
+    timeSP2HTML = null,
+    playerName1 = null,
+    playerName2 = null,
+    playerName3 = null,
+    playerNameError = null,
+    players = 2,
+    pageLoad = 0;
 
     //  Stop all Chronometers    
 var stopChronometer = ()=> {
@@ -59,6 +65,47 @@ var startChronometer = ()=> {
     }
     startChronometer();
   }
+  var validateNames = ()=> {
+    var alphaNum = /^[a-zA-Z0-9]*$/; //alphanumeric characters only
+    var isValid = true;
+    var playersNamesMessageError = [];
+    playerNameError = document.getElementById('playerNameError');
+    if(playerName1.value.length < 3) {
+        playersNamesMessageError.push ('Name 1 is short');
+        isValid = false;
+    }
+    if(!alphaNum.test(playerName1.value)) {
+        playerName1.value = '';
+        playersNamesMessageError.push ('Invalid characters in name 1');
+        isValid = false;
+    }   
+    if(playerName2.value.length < 3) {
+        playersNamesMessageError.push ('Name 2 is short');
+        isValid = false;
+    }
+    if(!alphaNum.test(playerName2.value)) {
+        playerName2.value = '';
+        playersNamesMessageError.push ('Invalid characters in name 2');
+        isValid = false;
+    }   
+    if(players == 3) {
+        if(playerName3.value.length < 3){
+            playersNamesMessageError.push ('Name 3 is short');
+            isValid = false;
+        }
+        if(!alphaNum.test(playerName3.value)) {
+            playerName3.value = '';
+            playersNamesMessageError.push ('Invalid characters in name');
+            isValid = false;
+        }   
+    }
+    if(isValid) {
+        goGame();
+        playerNameError.innerHTML = '';
+    } else {
+        playerNameError.innerHTML = '<p class = "error">' + playersNamesMessageError.join('</p> <p class = "error"> ') + '</p>';
+    } 
+}
 
   var loadNewGame = ()=> {
     turn = 'red',
@@ -66,10 +113,15 @@ var startChronometer = ()=> {
     acumMP1 = 0;
     acumSP2 = 0;
     acumMP2 = 0;
+    playerName1 = document.getElementById('playerName1');
+    playerName2 = document.getElementById('playerName2');
+    playerName3 = document.getElementById('playerName3');
     timeSP2HTML.innerHTML = acumSP2;
     timeMP2HTML.innerHTML = acumMP2;
     timeSP1HTML.innerHTML = acumSP1;
     timeMP1HTML.innerHTML = acumMP1;
+    timeP1HTML.style.background = '#4684F8';
+    timeP2HTML.style.background = 'black';
     boardArray = [
         [null, null, null, null, null, null],
         [null, null, null, null, null, null],
@@ -79,7 +131,7 @@ var startChronometer = ()=> {
         [null, null, null, null, null, null],
         [null, null, null, null, null, null],
         ];
-    goGame();
+    validateNames();
 }
 
   var buttonLoadHandler = ()=> {
@@ -98,3 +150,12 @@ var startChronometer = ()=> {
       savedGamesHTML.innerHTML = html;
       buttonLoadHandler();
   }
+  var renderPlayersNames = ()=> {
+    var html = '';
+    for (var i = 1; i <= players; i++){
+        html += '<label for="playerName' + i + '">Name player ' + i + '</label>';
+        html += '<input id="playerName' + i + '" class="ingress" type="text" name="name">';
+    }
+    html += '<div id="playerNameError"></div>';
+    playersNamesHTML.innerHTML = html;
+}
