@@ -38,12 +38,12 @@ var turn = 'red',
     var playersNamesMessageError = [];
     playerNameError = document.getElementById('playerNameError');
     if(playerName1Value.length < 3) {
-        playersNamesMessageError.push ('Name 1 is short');
+        playersNamesMessageError.push ('Name 1 is short, minimum three characters');
         isValid = false;
     }
-    if(playerName1Value.length > 16) {
-      playersNamesMessageError.push ('Name 1 is long');
-      isValid = false;
+    if(playerName1Value.length > 8) {
+        playersNamesMessageError.push ('Name 1 is long, maximum eight characters');
+        isValid = false;
   }
     if(!alphaNum.test(playerName1Value)) {
         playerName1Value = '';
@@ -51,12 +51,12 @@ var turn = 'red',
         isValid = false;
     }   
     if(playerName2Value.length < 3) {
-        playersNamesMessageError.push ('Name 2 is short');
+        playersNamesMessageError.push ('Name 2 is short, minimum three characters');
         isValid = false;
     }
-    if(playerName2Value.length > 16) {
-      playersNamesMessageError.push ('Name 2 is long');
-      isValid = false;
+    if(playerName2Value.length > 8) {
+        playersNamesMessageError.push ('Name 2 is long, maximum eight characters');
+        isValid = false;
     }
     if(!alphaNum.test(playerName2.value)) {
         playerName2Value = '';
@@ -65,12 +65,12 @@ var turn = 'red',
     }   
     if(players == 3) {
         if(playerName3Value.length < 3) {
-            playersNamesMessageError.push ('Name 3 is short');
+            playersNamesMessageError.push ('Name 3 is short, minimum three characters');
             isValid = false;
         }
-        if(playerName3Value.length > 16) {
-          playersNamesMessageError.push ('Name 3 is long');
-          isValid = false;
+        if(playerName3Value.length > 8) {
+            playersNamesMessageError.push ('Name 3 is long, maximum eight characters');
+            isValid = false;
       }
         if(!alphaNum.test(playerName3.value)) {
             playerName3Value = '';
@@ -94,13 +94,18 @@ var turn = 'red',
     }
   }
 //  load the saved games
-//  generates HTML content in the window
+//  generates HTML content in the screen
   var renderLoad = ()=> { 
       var html = '';
       for (var i = 0; i < LSSavedGames.length; i++) {
-        html += '<div id="load' + i + '" class="buttonScreen buttonLoad">' + i + ' '+ LSSavedGames[i].playerName1Value + ' VS '+ LSSavedGames[i].playerName2Value;
+        html += '<div id="load' + i + '" class="buttonScreen buttonLoad">'
+        html +=     '<div>' + i +  '</div>';
+        html +=     '<div>' + LSSavedGames[i].playerName1Value + '</div>';
+        html +=     '<div>VS</div>';
+        html +=     '<div>'+ LSSavedGames[i].playerName2Value + '</div>';
         if(LSSavedGames[i].players == 3 ) {
-            html += ' VS ' + LSSavedGames[i].playerName3Value;
+            html += '<div>VS</div>';
+            html += '<div>'+ LSSavedGames[i].playerName3Value + '</div>';
         }
         html += '</div>';
       }
