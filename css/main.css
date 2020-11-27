@@ -40,9 +40,11 @@
     font-family: 'Mukta', sans-serif;
 }
 
-.main .turn .time .chronometer{
+.main .turn .time .labelTime{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 33%;
 }
 .main .board {
     display: flex;

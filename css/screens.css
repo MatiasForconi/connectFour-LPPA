@@ -12,6 +12,7 @@
 .buttonScreen{
     width: 40%;
     height: 15%;
+    padding: 2%;
     background-color: #189b1f; 
     border: 0;
     border-radius: 10%;
@@ -20,6 +21,7 @@
 .buttonScreen:hover{
     width: 45%;
     height: 17%;
+    padding: 0%;
     background-color: #71108a; 
 }
 
