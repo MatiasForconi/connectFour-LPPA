@@ -2,7 +2,6 @@ var boardHTML = null,
     columnsHTML = null,
     winHTML = null,
     winDescHTML = null,
-    spotHTML = null,
     boardArray = [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -32,7 +31,7 @@ var boardHTML = null,
             if (boardArray[i][j]) {
                 if (boardArray[i][j] === (boardArray[i + 1][j]) && boardArray[i][j] === (boardArray[i + 2][j]) && boardArray[i][j] === (boardArray[i + 3][j])) {
                     winHTML.innerHTML = (turn + ' won!');
-                    winDescHTML.innerHTML = ('Congratulations, placed four ' + turn + ' tiles online before your adversary!');
+                    winDescHTML.innerHTML = ('Congratulations! You have placed four ' + turn + ' tiles in line and defeated your adversary!');
                     goWin();
                 }
                 if (boardArray[i][j] === (boardArray[i + 1][j + 1]) && boardArray[i][j] === (boardArray[i + 2][j + 2]) && boardArray[i][j] === (boardArray[i + 3][j + 3])) {
@@ -96,10 +95,10 @@ var renderBoard = ()=> {
         html += '<div id="c' + i + '" class="column">';
         for (var j = boardArray[i].length - 1; j >= 0; j--) {
             html += '<div id="s' + i + j + '" class="spot';
-            if(players == 3){
+            if(players == 3) {
                 html += ' player3';
             }
-            if (boardArray[i][j]) html += ' ' + boardArray[i][j]
+            if (boardArray[i][j]) html += ' ' + boardArray[i][j];
             {
                 html += '"></div>';
             }
