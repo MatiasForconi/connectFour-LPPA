@@ -37,23 +37,23 @@ var turn = 'red',
         var playersNamesMessageError = [];
         playerNameError = document.getElementById('playerNameError');
         if(playerName1.value.length < 3) {
-            playersNamesMessageError.push ('Name 1 is short');
+            playersNamesMessageError.push ('Name 1 is short, minimum three characters');
             isValid = false;
         }
-        if(playerName1.value.length > 16) {
-            playersNamesMessageError.push ('Name 1 is long');
+        if(playerName1Value.length > 8) {
+            playersNamesMessageError.push ('Name 1 is long, maximum eight characters');
             isValid = false;
         }
         if(!alphaNum.test(playerName1.value)) {
             playersNamesMessageError.push ('Invalid characters in name 1');
             isValid = false;
         }   
-        if(playerName2.value.length < 3) {
-            playersNamesMessageError.push ('Name 2 is short');
+        if(playerName2Value.length < 3) {
+            playersNamesMessageError.push ('Name 2 is short, minimum three characters');
             isValid = false;
         }
-        if(playerName2.value.length > 16) {
-            playersNamesMessageError.push ('Name 2 is long');
+        if(playerName2Value.length > 8) {
+            playersNamesMessageError.push ('Name 2 is long, maximum eight characters');
             isValid = false;
         }
         if(!alphaNum.test(playerName2Value)) {
@@ -62,12 +62,12 @@ var turn = 'red',
             isValid = false;
         }   
         if(players == 3) {
-            if(playerName3.value.length < 3) {
-                playersNamesMessageError.push ('Name 3 is short');
+            if(playerName3Value.length < 3) {
+                playersNamesMessageError.push ('Name 3 is short, minimum three characters');
                 isValid = false;
             }
-            if(playerName3.value.length > 16) {
-                playersNamesMessageError.push ('Name 3 is long');
+            if(playerName3Value.length > 8) {
+                playersNamesMessageError.push ('Name 3 is long, maximum eight characters');
                 isValid = false;
             }
             if(!alphaNum.test(playerName3Value)) {
@@ -94,10 +94,14 @@ var turn = 'red',
     var renderLoad = ()=> { 
         var html = '';
         for (var i = 0; i < LSSavedGames.length; i++) {
-    
             html += '<div id="load' + i + '" class="buttonScreen buttonLoad">' + i + ' '+ LSSavedGames[i].playerName1Value + ' VS '+ LSSavedGames[i].playerName2Value;
+            html +=     '<div>' + i +  '</div>';
+            html +=     '<div>' + LSSavedGames[i].playerName1Value + '</div>';
+            html +=     '<div>VS</div>';
+            html +=     '<div>'+ LSSavedGames[i].playerName2Value + '</div>';
             if(LSSavedGames[i].players == 3 ) {
-                html += ' VS ' + LSSavedGames[i].playerName3Value;
+                html += '<div>VS</div>';
+                html += '<div>'+ LSSavedGames[i].playerName3Value + '</div>';
             }
             html += '</div>';
         }
