@@ -29,9 +29,13 @@ input,textarea{
     width: 100%;
     border: 0;
     margin-bottom: 10%;
-    background: #C1C1D1;
+    background: #5d5df3;
     border-radius: 5%;
     outline: none;
+}
+
+input.ingress:hover, textarea:hover {
+    background: #7c7cf0;
 }
 
 .footerScreen{
@@ -55,7 +59,7 @@ input,textarea{
 }
 
 .error{
-    color: red;
+    color: #f3bf31;
 }
 
 .savedGames{
