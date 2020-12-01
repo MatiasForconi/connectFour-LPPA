@@ -186,11 +186,11 @@ var turn = 'red',
         if(players == 2) {
             if(turn === 'red') {
                 turn='blue';
-                timeP2HTML.style.background = '#4684F8';
+                timeP2HTML.style.background = '#4684f8e3';
                 timeP1HTML.style.background = 'black';
             }else {
                 turn='red';
-                timeP1HTML.style.background = ' #f16552';
+                timeP1HTML.style.background = ' #f16452e0';
                 timeP2HTML.style.background = 'black';
             }
         }else {
@@ -199,13 +199,13 @@ var turn = 'red',
             timeP3HTML.style.background = 'black';
             if(turn === 'red') {
                 turn='blue';
-                timeP2HTML.style.background = '#f16552';
+                timeP2HTML.style.background = '#4684f8e3';
             }else if(turn === 'blue') {
                 turn='green';
-                timeP3HTML.style.background = ' #68d336';
+                timeP3HTML.style.background = ' #68d336d8';
             }else {
                 turn='red';
-                timeP1HTML.style.background = '#f16552';
+                timeP1HTML.style.background = '#f16452e0';
             }
         }
         startChronometer();
@@ -274,7 +274,7 @@ var turn = 'red',
                 [null, null, null, null, null, null, null, null, null],
                 ];
         }
-        timeP1HTML.style.background = '#4684F8';
+        timeP1HTML.style.background = '#4684f8e3';
         timeP2HTML.style.background = 'black';
         validateNames();
         renderBoard();

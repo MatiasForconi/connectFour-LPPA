@@ -79,18 +79,18 @@
 }
 
 .main .board .column .spot.blue {
-    background: url(../images/blueChip.png) no-repeat center;
-    background-color:  #4684F8;
+    background: url(../images/blueChip.svg) no-repeat center;
+    background-color:  #4684f8e3;
 }
 
 .main .board .column .spot.red {
-    background: url(../images/redChip.png) no-repeat center;
-    background-color: #f16552;
+    background: url(../images/redChip.svg) no-repeat center;
+    background-color:#f16452e0;
 }
 
 .main .board .column .spot.green {
-    background: url(../images/greenChip.png) no-repeat center;
-    background-color: #68d336 ;
+    background: url(../images/greenChip.svg) no-repeat center;
+    background-color: #68d336d8 ;
 }
 
 .main .board .column .spot.player3{
@@ -107,7 +107,7 @@
 .footer .btnRight, .footer .btnLeft{
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 30%;
     height: 100%;
 }
 
@@ -119,12 +119,13 @@
     width: 30%;
     height: 100%;
     border-radius: 20%;
-    background-color: black;
+    background-color: rgb(34, 5, 114);
     color: white;
+    cursor: pointer;
 }
 
 .buttonMain:hover{
-    background-color: rgb(228, 166, 32);
+    background-color: rgba(92, 66, 238, 0.979);
 }
 
 .savedGames{
