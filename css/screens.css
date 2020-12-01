@@ -27,6 +27,12 @@
     cursor: pointer;
 }
 
+h2.header {
+    font-size: 30px;
+    color: #08175a;
+    text-shadow: 2px 2px 5px #fff;
+}
+
 input,textarea{
     width: 100%;
     border: 0;
