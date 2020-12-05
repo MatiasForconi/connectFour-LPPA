@@ -25,6 +25,7 @@
     background-color: #71108a;
     color: #fff; 
     cursor: pointer;
+    outline: none;
 }
 
 h1.header {
@@ -35,15 +36,20 @@ h1.header {
 
 input,textarea{
     width: 100%;
+    height: 18%;
     border: 0;
     margin-bottom: 8%;
     background: #5d5df3;
-    border-radius: 5%;
     outline: none;
 }
 
 input.ingress:hover, textarea:hover {
     background: #7c7cf0;
+}
+
+textarea{
+    min-height: 45px;
+    resize: none;
 }
 
 .footerScreen{
@@ -57,13 +63,13 @@ input.ingress:hover, textarea:hover {
 
 .buttonForm{
     width: 40%;
-    height: 30%;
-    border-radius: 5%;
+    height: 50%;
+    border-radius: 1%;
 }
 
 .buttonForm:hover{
     width: 45%;
-    height: 40%;
+    height: 55%;
 }
 
 .error{
