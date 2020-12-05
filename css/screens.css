@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 
-h2.header {
+h1.header {
     font-size: 30px;
     color: #08175a;
     text-shadow: 2px 2px 5px #fff;
@@ -68,6 +68,10 @@ input.ingress:hover, textarea:hover {
 
 .error{
     color: #f3bf31;
+}
+
+h2.draw, div.drawText{
+    color: #fff;
 }
 
 .savedGames{
