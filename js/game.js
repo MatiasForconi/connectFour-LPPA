@@ -94,7 +94,7 @@ var turn = 'red',
     var renderLoad = ()=> { 
         var html = '';
         for (var i = 0; i < LSSavedGames.length; i++) {
-            html += '<div id="load' + i + '" class="buttonScreen buttonLoad">' + i + ' '+ LSSavedGames[i].playerName1Value + ' VS '+ LSSavedGames[i].playerName2Value;
+            html += '<div id="load' + i + '" class="buttonScreen buttonLoad">';
             html +=     '<div>' + i +  '</div>';
             html +=     '<div>' + LSSavedGames[i].playerName1Value + '</div>';
             html +=     '<div>VS</div>';
@@ -154,7 +154,7 @@ var turn = 'red',
                     acumMP1++;
                     timeMP1HTML.innerHTML = acumMP1;
                 }
-                timeSP1HTML.innerHTML = acumSP1;
+                (acumSP1 < 10) ? timeSP1HTML.innerHTML = ('0') + acumSP1 : timeSP1HTML.innerHTML = acumSP1;
                 acumSP1++;
             },1000);
         }else if (turn === 'blue') {
@@ -165,7 +165,7 @@ var turn = 'red',
                     acumMP2++;
                     timeMP2HTML.innerHTML = acumMP2;
                 }
-                timeSP2HTML.innerHTML = acumSP2;
+                (acumSP2 < 10) ? timeSP2HTML.innerHTML = ('0') + acumSP2 : timeSP2HTML.innerHTML = acumSP2;
                 acumSP2++;
             },1000);
         }else {
@@ -176,7 +176,7 @@ var turn = 'red',
                         acumMP3++;
                         timeMP3HTML.innerHTML = acumMP3;
                     }
-                    timeSP3HTML.innerHTML = acumSP3;
+                    (acumSP3 < 10) ? timeSP3HTML.innerHTML = ('0') + acumSP3 : timeSP3HTML.innerHTML = acumSP3;
                     acumSP3++;
                 },1000);
         }
@@ -232,9 +232,9 @@ var turn = 'red',
         timeSP1HTML = document.getElementById('timeSP1');
         timeMP2HTML = document.getElementById('timeMP2');
         timeSP2HTML = document.getElementById('timeSP2');
-        timeSP2HTML.innerHTML = acumSP2;
+        timeSP2HTML.innerHTML = ('0')+acumSP2;
         timeMP2HTML.innerHTML = acumMP2;
-        timeSP1HTML.innerHTML = acumSP1;
+        timeSP1HTML.innerHTML = ('0')+acumSP1;
         timeMP1HTML.innerHTML = acumMP1;
         //playerNameTurn is name in the game
         PlayerName1TurnHTML = document.getElementById('PlayerName1Turn');
@@ -257,7 +257,7 @@ var turn = 'red',
             PlayerName3TurnHTML = document.getElementById('PlayerName3Turn');
             playerName3 = document.getElementById('playerName3');
             playerName3Value = playerName3.value;
-            timeSP3HTML.innerHTML = acumSP3;
+            timeSP3HTML.innerHTML = ('0')+acumSP3;
             timeMP3HTML.innerHTML = acumMP3;
             timeP3HTML.style.background = 'black';
             PlayerName3TurnHTML.innerHTML = playerName3Value;
@@ -274,7 +274,7 @@ var turn = 'red',
                 [null, null, null, null, null, null, null, null, null],
                 ];
         }
-        timeP1HTML.style.background = '#4684f8e3';
+        timeP1HTML.style.background = '#f16452e0';
         timeP2HTML.style.background = 'black';
         validateNames();
         renderBoard();
