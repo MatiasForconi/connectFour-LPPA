@@ -6,7 +6,7 @@
     height: 100vh;
     width: 100%;
     font-family: 'Open Sans', sans-serif;
-    background: transparent url(../images/background.png) repeat center center;
+    background: transparent url(../assets/background.png) repeat center center;
 }
 
 .main {
@@ -51,7 +51,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: url(../images/boardBackground.jpg);
+    background: url(../assets/boardBackground.jpg);
     border-radius: 5%;
     padding: 0 2%;
     width: 50%;
@@ -79,17 +79,17 @@
 }
 
 .main .board .column .spot.blue {
-    background: url(../images/blueChip.svg) no-repeat center;
+    background: url(../assets/blueChip.svg) no-repeat center;
     background-color:  #4684f8e3;
 }
 
 .main .board .column .spot.red {
-    background: url(../images/redChip.svg) no-repeat center;
+    background: url(../assets/redChip.svg) no-repeat center;
     background-color:#f16452e0;
 }
 
 .main .board .column .spot.green {
-    background: url(../images/greenChip.svg) no-repeat center;
+    background: url(../assets/greenChip.svg) no-repeat center;
     background-color: #68d336d8 ;
 }
 

@@ -2,6 +2,7 @@ var boardHTML = null,
     columnsHTML = null,
     winHTML = null,
     winDescHTML = null,
+    token = new Audio(),
     boardArray = [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -76,6 +77,7 @@ var boardHTML = null,
                 checkGameStatus();
                 toggleTurn();
                 renderBoard();
+                token.play();
                 break;
             }
         }

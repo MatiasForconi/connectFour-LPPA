@@ -27,6 +27,7 @@ var init = ()=> {
     backPlayersNames = document.getElementById('backPlayersNames');
     nextPlayersNames = document.getElementById('nextPlayersNames');
     turnHTML = document.getElementById('turn');
+    token.src = './assets/token.wav';
     backPlayersNames.onclick = goHome;
     nextPlayersNames.onclick = loadNewGame;
     newGame.onclick = loadNewGame; 
