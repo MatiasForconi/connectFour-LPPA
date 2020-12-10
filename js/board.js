@@ -67,29 +67,28 @@ var boardHTML = null,
         }
     }
 }
-    /*  trim the string id, showing only the second element, which is the column, 
-    then look for the first empty box in that column and run the corresponding events*/
-    var columnEventHandler = (e)=> {
-        var columnId = e.target.id.substr(1, 1);
-        for (var i = 0; i < boardArray[columnId].length; i++) {
-            if (!boardArray[columnId][i]) {
-                boardArray[columnId][i] = turn;
-                checkGameStatus();
-                toggleTurn();
-                renderBoard();
-                token.play();
-                break;
-            }
+/*  trim the string id, showing only the second element, which is the column, 
+then look for the first empty box in that column and run the corresponding events*/
+var columnEventHandler = (e)=> {
+    var columnId = e.target.id.substr(1, 1);
+    for (var i = 0; i < boardArray[columnId].length; i++) {
+        if (!boardArray[columnId][i]) {
+            boardArray[columnId][i] = turn;
+            checkGameStatus();
+            toggleTurn();
+            renderBoard();
+            token.play();
+            break;
         }
     }
-    //  add event onclick to all columns creates
-    var bindColumnHandlers = ()=> {
-        columnsHTML = document.getElementsByClassName('column');
-        for (var i = 0; i < columnsHTML.length; i++) {
-            columnsHTML[i].onclick = columnEventHandler;
-        }
+}
+//  add event onclick to all columns creates
+var bindColumnHandlers = ()=> {
+    columnsHTML = document.getElementsByClassName('column');
+    for (var i = 0; i < columnsHTML.length; i++) {
+        columnsHTML[i].onclick = columnEventHandler;
     }
-
+}
 //generates HTML content in the board
 var renderBoard = ()=> { 
     var html = '';

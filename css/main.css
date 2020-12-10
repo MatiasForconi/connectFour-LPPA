@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@
     width: 100%;
 }
 
-.main .turn{
+.main .turn {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +28,7 @@
     margin: 2% 0;
 }
 
-.main .turn .time{
+.main .turn .time {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,12 +40,13 @@
     font-family: 'Mukta', sans-serif;
 }
 
-.main .turn .time .labelTime{
+.main .turn .time .labelTime {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 33%;
 }
+
 .main .board {
     display: flex;
     flex-direction: row;
@@ -58,7 +59,7 @@
     height: 70%;
 }
 
-.main .board .column{
+.main .board .column {
     width: 14%;
     height: 100%;
     display: flex;
@@ -66,7 +67,7 @@
     align-items: center;
 }
 
-.main .board .column:hover{
+.main .board .column:hover {
     background-color: #946d4bb0;
 }
 
@@ -80,12 +81,12 @@
 
 .main .board .column .spot.blue {
     background: url(../assets/blueChip.svg) no-repeat center;
-    background-color:  #4684f8e3;
+    background-color: #4684f8e3;
 }
 
 .main .board .column .spot.red {
     background: url(../assets/redChip.svg) no-repeat center;
-    background-color:#f16452e0;
+    background-color: #f16452e0;
 }
 
 .main .board .column .spot.green {
@@ -93,29 +94,30 @@
     background-color: #68d336d8 ;
 }
 
-.main .board .column .spot.player3{
+.main .board .column .spot.player3 {
     width: 75%;
     height: 10%;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
     height: 10%;
     width: 100%;
 }
-.footer .btnRight, .footer .btnLeft{
+
+.footer .btnRight, .footer .btnLeft {
     display: flex;
     justify-content: space-between;
     width: 30%;
     height: 100%;
 }
 
-.footer .btnRight{
+.footer .btnRight {
     justify-content: space-around;
 }
 
-.buttonMain{
+.buttonMain {
     width: 30%;
     height: 100%;
     border-radius: 20%;
@@ -125,11 +127,11 @@
     outline: none;
 }
 
-.buttonMain:hover{
+.buttonMain:hover {
     background-color: rgba(92, 66, 238, 0.979);
 }
 
-.savedGames{
+.savedGames {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -138,22 +140,21 @@
     height: 100%;
 }
 
-@media(max-width: 1020px){
-    .main{
+@media(max-width: 1020px) {
+    .main {
         width: 100%;
         height: 100%;
     }
-    .main .board{
+    .main .board {
         width: 50%;
         height: 70%;
     }
-    .main .turn{
+    .main .turn {
         width: 52%;
         height: 10%;
     }
-    .footer .btnRight, .footer .btnLeft{
+    .footer .btnRight, .footer .btnLeft {
         width: 30%;
         height: 100%;
     }
 }
-

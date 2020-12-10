@@ -48,11 +48,11 @@ var loadGame = (e)=> {
         timeP3HTML.style.background = 'black';
     }
     if(turn == 'red') {
-        timeP1HTML.style.background = '#f16552';
+        timeP1HTML.style.background = '#f16452e0';
     }else if(turn == 'blue') {
-        timeP2HTML.style.background = ' #4684F8';
+        timeP2HTML.style.background = '#4684f8e3';
     }else {
-        timeP3HTML.style.background = ' #68d336';
+        timeP3HTML.style.background = '#68d336d8';
     }
     goGame();
 }
