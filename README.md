@@ -4,7 +4,7 @@ Develop a web version of the game "[Connect Four](https://en.wikipedia.org/wiki/
 
 ### DEVELOPER  
 
-[Matias Forconi](https://github.com/MatiasForconi) - Diciembre 2020
+[Matias Forconi](https://github.com/MatiasForconi) - December 2020
 
 ### PLAY ONLINE
 
