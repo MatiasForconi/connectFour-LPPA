@@ -111,16 +111,4 @@ h2.draw, div.drawText{
         height: 60%;
     }
 }
-@media(max-width: 1020px){
-    .screen{
-        width: 40%;
-        height: 70%;
-    }
-}
 
-@media(max-width: 750px){
-    .screen{
-        width: 60%;
-        height: 70%;
-    }
-}

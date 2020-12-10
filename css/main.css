@@ -144,26 +144,16 @@
         height: 100%;
     }
     .main .board{
-        width: 75%;
-        height: 60%;
+        width: 50%;
+        height: 70%;
+    }
+    .main .turn{
+        width: 52%;
+        height: 10%;
     }
     .footer .btnRight, .footer .btnLeft{
-        width: 50%;
+        width: 30%;
         height: 100%;
     }
 }
 
-@media(max-width: 750px) {
-    .main{
-        width: 100%;
-        height: 100%;
-    }
-    .main .board{
-        width: 95%;
-        height: 60%;
-    }
-    .footer .btnRight, .footer .btnLeft{
-        width: 50%;
-        height: 100%;
-    }
-}
